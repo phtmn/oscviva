@@ -93,6 +93,7 @@
                 <!-- ============================================================== -->
                 <!-- Right side toggle and nav items -->
                 <!-- ============================================================== -->
+
                 <ul class="navbar-nav float-right">                    
                     <!-- ============================================================== -->
                     <!-- User profile and search -->
@@ -100,15 +101,15 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('vendor/matrix/assets/images/users/1.jpg')}}" alt="" class="rounded-circle" width="31"></a>
                         <div class="dropdown-menu dropdown-menu-right user-dd animated">
-                            <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
-                            <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
-                            <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i> Inbox</a>
+                            <a class="dropdown-item" href="#"><i class="ti-user m-r-5 m-l-5"></i> Minha Conta</a>
+                            <a class="dropdown-item" href="#"><i class="ti-email m-r-5 m-l-5"></i> Mensagens</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
+                            <a class="dropdown-item" href="#"><i class="ti-settings m-r-5 m-l-5"></i> Configurações</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
-                            <div class="dropdown-divider"></div>
-                            <div class="p-l-30 p-10"><a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded">View Profile</a></div>
+                            <a class="dropdown-item" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                <i class="fa fa-power-off m-r-5 m-l-5"></i> Sair do OSC
+                            </a>
                         </div>
                     </li>
                     <!-- ============================================================== -->
@@ -116,6 +117,9 @@
                     <!-- ============================================================== -->
                 </ul>
             </div>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
         </nav>
     </header>
     <!-- ============================================================== -->
@@ -147,21 +151,7 @@
         <!-- ============================================================== -->
         <!-- Bread crumb and right sidebar toggle -->
         <!-- ============================================================== -->
-        <div class="page-breadcrumb">
-            <div class="row">
-                <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">Full Width</h4>
-                    <div class="ml-auto text-right">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Library</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @yield('breadcumb')
         <!-- ============================================================== -->
         <!-- End Bread crumb and right sidebar toggle -->
         <!-- ============================================================== -->
@@ -221,6 +211,8 @@
 <script src="{{asset('vendor/matrix/dist/js/sidebarmenu.js')}}"></script>
 <!--Custom JavaScript -->
 <script src="{{asset('vendor/matrix/dist/js/custom.min.js')}}"></script>
+
+@yield('js')
 </body>
 
 </html>
