@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Cadastros;
 
 use App\Models\Cargo;
+use App\Models\Colaborador;
+use App\Models\Mensageiro;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Colaborador;
+use App\Models\Doador;
 
-class ColaboradorController extends Controller
+class DoadorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +18,8 @@ class ColaboradorController extends Controller
      */
     public function index()
     {
-        $data = Colaborador::latest()->get();
-        return view('cadastros.colaborador.index',compact('data'));
+        $data = Doador::all();
+        return view('cadastros.doador.index',compact('data'));
     }
 
     /**
@@ -27,8 +29,8 @@ class ColaboradorController extends Controller
      */
     public function create()
     {
-        $cargos = Cargo::all()->pluck('nome','id');
-        return view('cadastros.colaborador.formulario',compact('cargos'));
+        $mensageiros = Colaborador::where('cargo_id',1)->get()->pluck('nome_completo','id');
+        return view('cadastros.doador.formulario',compact('mensageiros'));
     }
 
     /**
@@ -40,9 +42,9 @@ class ColaboradorController extends Controller
     public function store(Request $request)
     {
 
-        $colaborador = Colaborador::create($request->all());
-        if($colaborador){
-            return redirect()->route('colaborador.index');
+        $doador = Doador::create($request->all());
+        if($doador){
+            return redirect()->route('doador.index');
         }else{
             return 'erro ao gravar';
         }
@@ -67,9 +69,9 @@ class ColaboradorController extends Controller
      */
     public function edit($id)
     {
-        $colaborador = Colaborador::findOrFail($id);
-        $cargos = Cargo::all()->pluck('nome','id');
-        return view('cadastros.colaborador.formulario',compact('colaborador','cargos'));
+        $doador = Doador::findOrFail($id);
+        $mensageiros = Colaborador::where('cargo_id',1)->get()->pluck('nome_completo','id');
+        return view('cadastros.doador.formulario',compact('doador','mensageiros'));
     }
 
     /**
@@ -82,8 +84,8 @@ class ColaboradorController extends Controller
     public function update(Request $request, $id)
     {
 
-        Colaborador::find($id)->update($request->all());
-        return redirect()->route('colaborador.index');
+        Doador::find($id)->update($request->all());
+        return redirect()->route('doador.index');
     }
 
     /**

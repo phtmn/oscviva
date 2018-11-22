@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Cadastros;
 
-use App\Models\Cargo;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Colaborador;
+use App\Models\Cargo;
 
-class ColaboradorController extends Controller
+class CargosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,8 @@ class ColaboradorController extends Controller
      */
     public function index()
     {
-        $data = Colaborador::latest()->get();
-        return view('cadastros.colaborador.index',compact('data'));
+        $data = Cargo::all();
+        return view('cadastros.cargos.index',compact('data'));
     }
 
     /**
@@ -27,8 +26,7 @@ class ColaboradorController extends Controller
      */
     public function create()
     {
-        $cargos = Cargo::all()->pluck('nome','id');
-        return view('cadastros.colaborador.formulario',compact('cargos'));
+        return view('cadastros.cargos.formulario');
     }
 
     /**
@@ -40,9 +38,9 @@ class ColaboradorController extends Controller
     public function store(Request $request)
     {
 
-        $colaborador = Colaborador::create($request->all());
-        if($colaborador){
-            return redirect()->route('colaborador.index');
+        $cargos = Cargo::create($request->all());
+        if($cargos){
+            return redirect()->route('cargos.index');
         }else{
             return 'erro ao gravar';
         }
@@ -67,9 +65,8 @@ class ColaboradorController extends Controller
      */
     public function edit($id)
     {
-        $colaborador = Colaborador::findOrFail($id);
-        $cargos = Cargo::all()->pluck('nome','id');
-        return view('cadastros.colaborador.formulario',compact('colaborador','cargos'));
+        $cargos = Cargo::findOrFail($id);
+        return view('cadastros.cargos.formulario',compact('cargos'));
     }
 
     /**
@@ -82,8 +79,8 @@ class ColaboradorController extends Controller
     public function update(Request $request, $id)
     {
 
-        Colaborador::find($id)->update($request->all());
-        return redirect()->route('colaborador.index');
+        Cargo::find($id)->update($request->all());
+        return redirect()->route('cargos.index');
     }
 
     /**

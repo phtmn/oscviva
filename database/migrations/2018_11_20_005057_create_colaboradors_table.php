@@ -58,6 +58,7 @@ class CreateColaboradorsTable extends Migration
             $table->string('cnh_categoria')->nullable();
             $table->string('cnh_vencimento')->nullable();
             //cargo-salario
+            $table->unsignedInteger('cargo_id');
             $table->date('cargo_dtAdmissao')->nullable();
             $table->decimal('cargo_salario',10,2)->nullable();
             $table->string('cargo_horTrabalho')->nullable();

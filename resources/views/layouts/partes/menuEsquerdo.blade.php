@@ -5,9 +5,9 @@
     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Cadastros </span></a>
         <ul aria-expanded="false" class="collapse  first-level">
             <li class="sidebar-item"><a href="{{route('colaborador.index')}}" class="sidebar-link"><i class="mdi mdi-account-multiple"></i><span class="hide-menu"> Colaborador </span></a></li>
-            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-car"></i><span class="hide-menu"> Frotas / Veículos </span></a></li>
+            <li class="sidebar-item"><a href="{{route('doador.index')}}" class="sidebar-link"><i class="mdi mdi-account-multiple"></i><span class="hide-menu"> Doador </span></a></li>
+            <li class="sidebar-item"><a href="{{route('cargos.index')}}" class="sidebar-link"><i class="mdi mdi-account-multiple"></i><span class="hide-menu"> Cargos </span></a></li>
             <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-content-paste"></i><span class="hide-menu"> Produtos/Serviços </span></a></li>
-            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Imobilizado </span></a></li>
         </ul>
     </li>
     

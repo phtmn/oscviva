@@ -9,4 +9,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 //cadastros
 Route::group(['namespace'=>'Cadastros','prefix'=>'admin','middleware'=>'auth'],function(){
         Route::resource('colaborador','ColaboradorController');
+        Route::resource('cargos','CargosController');
+        Route::resource('doador','DoadorController');
 });

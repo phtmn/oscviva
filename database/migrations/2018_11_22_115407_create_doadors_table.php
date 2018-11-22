@@ -15,9 +15,9 @@ class CreateDoadorsTable extends Migration
     {
         Schema::create('doadores', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('menssageiro_id');
+            $table->unsignedInteger('mensageiro_id');
             $table->string('nome_completo');
-            $table->string('nome_recibo');
+            $table->string('nome_recibo')->nullable();
             $table->date('data_nascimento')->nullable();
             $table->string('tipo_cadastro')->nullable();
             $table->string('sexo')->nullable();
@@ -34,14 +34,17 @@ class CreateDoadorsTable extends Migration
             $table->string('uf')->nullable();
             $table->string('numero')->nullable();
             $table->string('complemento')->nullable();
+            $table->string('periodicidade')->nullable();
+            $table->string('situacao')->nullable();
+            $table->string('dia_pgto',2)->nullable();
             $table->text('obs_financeiras')->nullable();
             $table->text('obs_pessoais')->nullable();
             $table->text('obs_gerais')->nullable();
             $table->softDeletes();
             $table->timestamps();
 
-            $table->foreign('menssageiro_id')->references('id')
-                            ->on('menssageiros')->onDelete('cascade');
+            $table->foreign('mensageiro_id')->references('id')
+                            ->on('cargos')->onDelete('cascade');
 
         });
     }

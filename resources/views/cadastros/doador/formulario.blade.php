@@ -4,12 +4,12 @@
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-12 d-flex no-block align-items-center">
-                <h4 class="page-title">Cadastrar Colaborador</h4>
+                <h4 class="page-title">Cadastrar Doador</h4>
                 <div class="ml-auto text-right">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('colaborador.index')}}">Voltar</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Cadastro de Colaborador</li>
+                            <li class="breadcrumb-item"><a href="{{route('doador.index')}}">Voltar</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Cadastro de Doador</li>
                         </ol>
                     </nav>
                 </div>
@@ -23,39 +23,36 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <small>campos com (**) são obrigatórios</small>
+            <small>campos com (*) são obrigatórios</small>
         </div>
-        @if( isset($colaborador) )
-            {{ Form::model($colaborador,['route'=> ['colaborador.update',$colaborador->id] ]) }}
+        @if( isset($doador) )
+            {{ Form::model($doador,['route'=> ['doador.update',$doador->id] ]) }}
             <input type="hidden" value="PUT" name="_method">
         @else
-            {{ Form::open(['route'=>'colaborador.store']) }}
+            {{ Form::open(['route'=>'doador.store']) }}
 
         @endif
         <div class="card-body">
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#dadosPessoais" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down">Informações Gerais</span></a> </li>
-                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#documentos" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down">Documentos</span></a> </li>
-                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#cargosSalarios" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down">Cargo/Salario</span></a> </li>
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#financeiro" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down">Financeiro</span></a> </li>
+
             </ul>
-            <!-- Tab panes -->
             <div class="tab-content tabcontent-border">
                 <div class="tab-pane active" id="dadosPessoais" role="tabpanel">
                     <div style="margin-top: 20px">
-                        @include('cadastros.colaborador.tabDadosPessoais')
+                        @include('cadastros.doador.tabDadosPessoais')
                     </div>
                 </div>
-                <div class="tab-pane" id="documentos" role="tabpanel">
+                <div class="tab-pane" id="financeiro" role="tabpanel">
                     <div style="margin-top: 20px">
-                        @include('cadastros.colaborador.tabDocumentos')
+                        @include('cadastros.doador.tabFinanceiro')
                     </div>
                 </div>
-                <div class="tab-pane p-20" id="cargosSalarios" role="tabpanel">
-                    <div style="margin-top: 20px">
-                        @include('cadastros.colaborador.tabCargoSalario')
-                    </div>
-                </div>
+
             </div>
+
+        </div>
             <div class="card-footer">
                 {!! Form::submit(null,['class'=>'btn btn-info']) !!}
             </div>
