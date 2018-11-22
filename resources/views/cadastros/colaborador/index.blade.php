@@ -26,22 +26,19 @@
             <div class="card-header">
                 <a href="{{route('colaborador.create')}}" class="btn btn-info">Cadastrar Colaborador</a>
             </div>
-            
+                        
             <div class="card-body">
                 <table class="table">
                     <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nome Completo</th>
-                            <th>Email</th>
-                            <th>Data Nascimento</th>
-                            <th>Data Cadastro</th>
-                            <th></th>
-
-                        </tr>
+                        <th>#</th>
+                        <th>Nome Completo</th>
+                        <th>Email</th>
+                        <th>Data Cadastro</th>
+                        <th>Telefone</th>
+                        <th>Actions</th>
                     </thead>
                     <tbody>
-                        @forelse($data as $d)
+                    @forelse($data as $d)
                         <tr>
                             <td>{{ $d->id }}</td>
                             <td>{{ $d->nome_completo }}</td>
@@ -50,7 +47,7 @@
                             <td>{{ $d->created_at }}</td>
                             <td>
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mais Opções</button>
+                                    <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mais opções</button>
                                     <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 35px, 0px); top: 0px; left: 0px; will-change: transform;">
                                         <a class="dropdown-item" href="{{route('colaborador.edit',$d->id)}}">Editar</a>
                                         <a class="dropdown-item" href="#"><i class="fa fa-trash"></i> Excluir</a>
@@ -58,9 +55,9 @@
                                 </div>
                             </td>
                         </tr>
-                        @empty
+                    @empty
                         <p>Não há registros</p>
-                        @endforelse
+                    @endforelse
                     </tbody>
                 </table>
             </div>

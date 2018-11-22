@@ -65,7 +65,7 @@ class ColaboradorController extends Controller
      */
     public function edit($id)
     {
-        $colaborador = Colaborador::find($id);
+        $colaborador = Colaborador::findOrFail($id);
         return view('cadastros.colaborador.formulario',compact('colaborador'));
     }
 
@@ -78,7 +78,7 @@ class ColaboradorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //dd($request->all());
+
         Colaborador::find($id)->update($request->all());
         return redirect()->route('colaborador.index');
     }
