@@ -1,44 +1,18 @@
-<div class="row">
-    <div class="form-group col-4">
-        {!! Form::label('Cargo') !!}
-        {!! Form::select('cargo_id',$cargos,null,['class'=>'form-control','placeholder'=>'Escolha uma opção']) !!}
-    </div>
-    <div class="form-group col-4">
-        {!! Form::label('Data de Admissão') !!}
-        {!! Form::date('cargo_dtAdmissao',null,['class'=>'form-control',]) !!}
-    </div>
-    <div class="form-group col-4">
-        {!! Form::label('Salário') !!}
-        {!! Form::text('cargo_salario',null,['class'=>'form-control',]) !!}
-    </div>
+<p>Em desenvolvimento...</p>
+
+
+<div class="form-group col-6">
+        {!! Form::label('nome_que_vai_exibir') !!}
+        <span class="text-muted">*</span>
+        {!! Form::text('nome_do_campo_no_banco',null,['class'=>'form-control','required'=>'true','placehoder'=>'texto']) !!}
 </div>
 
-<div class="row">
-    <div class="form-group col-3">
-        {!! Form::label('Horário de Trabalho') !!}
-        {!! Form::text('cargo_horTrabalho',null,['class'=>'form-control',]) !!}
+<div class="form-group col-3">
+        {!! Form::label('Estado civil') !!}
+        {!! Form::select('estado_civil',['CAS'=>'Casado(a)',
+                                         'SOL'=>'Solteiro(a)',
+                                         'DIV'=>'Divorciado(a)',
+                                         'FAL'=>'Falecido(a)',
+                                         'N/A'=>'Não Declarado'],null,['class'=>'form-control'])
+         !!}
     </div>
-    <div class="form-group col-3">
-        {!! Form::label('Vale Transporte') !!}
-        {!! Form::text('cargo_valeTransporte',null,['class'=>'form-control',]) !!}
-    </div>
-    <div class="form-group col-3">
-        {!! Form::label('Quantidade de Vale Transporte') !!}
-        {!! Form::text('cargo_qtdValeTransporte',null,['class'=>'form-control',]) !!}
-    </div>
-    <div class="form-group col-3">
-        {!! Form::label('Valor do Vale Transporte') !!}
-        {!! Form::text('cargo_valorValeTransporte',null,['class'=>'form-control',]) !!}
-    </div>
-</div>
-
-<div class="row">
-    <div class="form-group col-3">
-        {!! Form::label('Experiencia') !!}
-        {!! Form::text('cargo_contratoExperiencia',null,['class'=>'form-control',]) !!}
-    </div>
-    <div class="form-group col-3">
-        {!! Form::label('Local de Trabalho') !!}
-        {!! Form::text('cargo_localTrabalho',null,['class'=>'form-control',]) !!}
-    </div>
-</div>
