@@ -43,8 +43,8 @@
         <div class="auth-box bg-dark border-top border-secondary">
             <div id="loginform">
                 <div class="text-center p-t-20 p-b-20">
-                    {{--<span class="db"><img src="../../assets/images/logo.png" alt="logo" /></span>--}}
-                    <p class="title">logo osc viva aqui</p>
+                    <span class="db"><img src="{{asset('imgs/logo-oscviva-versao1.png')}}   " alt="logo" /></span>
+                   <!-- <p class="title">Bem vindo </p> --!
                 </div>
                 <!-- Form -->
                 <form class="form-horizontal m-t-20" id="loginform" action="{{route('login')}}" method="POST">
@@ -79,8 +79,8 @@
                         <div class="col-12">
                             <div class="form-group">
                                 <div class="p-t-20">
-                                    <button class="btn btn-info" id="to-recover" type="button"><i class="fa fa-lock m-r-5"></i> Lost password?</button>
-                                    <button class="btn btn-success float-right" type="submit">Login</button>
+                                   <!-- <button class="btn btn-info" id="to-recover" type="button"><i class="fa fa-lock m-r-5"></i> Esqueceu a senha?</button> -->
+                                    <button class="btn btn-success float-right" type="submit">ENTRAR</button>
                                 </div>
                             </div>
                         </div>
