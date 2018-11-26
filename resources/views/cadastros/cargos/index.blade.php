@@ -1,4 +1,4 @@
-@extends('layouts.matrix')
+@extends('layouts.admin')
 
 @section('breadcumb')
 <div class="page-breadcrumb">
@@ -8,7 +8,7 @@
             <div class="ml-auto text-right">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Cargos</li>
                     </ol>
                 </nav>

@@ -1,4 +1,4 @@
-@extends('layouts.matrix')
+@extends('layouts.admin')
 
 @section('breadcumb')
 <div class="page-breadcrumb">

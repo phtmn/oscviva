@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html dir="ltr">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -9,154 +10,125 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
-    <title>OSCViva - The ultimate ONG's system</title>
-    <!-- Custom CSS -->
-    <link href="{{asset('vendor/matrix/dist/css/style.min.css')}}" rel="stylesheet">
-    <link href="{{asset('css/osc.css')}}" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('imgs/favicon.ico')}}">
+    <title>COOPVIVA</title>
+    <!-- Bootstrap Core CSS -->
+    <!-- Styles -->
+    <link href="{{ asset('vendor/material-lite/assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Template Styles -->
+    <link href="{{ asset('vendor/material-lite/lite/css/style.css') }}" rel="stylesheet">
+    <!-- Color Theme -->
+    <link href="{{ asset('vendor/material-lite/lite/css/colors/blue.css') }}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<![endif]-->
 </head>
 
 <body>
-<div class="main-wrapper">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
+   
+
     <div class="preloader">
-        <div class="lds-ripple">
-            <div class="lds-pos"></div>
-            <div class="lds-pos"></div>
-        </div>
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
     </div>
     <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
+    <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Login box.scss -->
-    <!-- ============================================================== -->
-    <div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background-color: #28b779">
-        <div class="auth-box bg-dark border-top border-secondary">
-            <div id="loginform">
-                <div class="text-center p-t-20 p-b-20">
-                    <span class="db"><img src="{{asset('imgs/logo-oscviva-versao1.png')}}   " alt="logo" /></span>
-                   <!-- <p class="title">Bem vindo </p> --!
-                </div>
-                <!-- Form -->
-                <form class="form-horizontal m-t-20" id="loginform" action="{{route('login')}}" method="POST">
+    
+    <section id="wrapper" class="login-register bg-success" style="background-image:url(imgs/fundo.png);">
+        <div class="login-box card">
+        @if(Session::has('mensagem'))
+            <div class="alert {{ Session::get('mensagem')['class'] }}" role="alert">
+                     {{ Session::get('mensagem')['msg'] }}
+            </div>
+        @endif
+            
+            <div class="card-body">
+                <form class="form-horizontal form-material" id="loginform" action="{{ route('login') }}" method="POST">
                     {{ csrf_field() }}
-                    <div class="row p-b-30">
-                        <div class="col-12">
-                            <div class="input-group mb-3 {{ $errors->has('email') ? ' has-error' : '' }}">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-success text-white" id="basic-addon1"><i class="ti-user"></i></span>
-                                </div>
-                                <input type="email" class="form-control form-control-lg" name="email" aria-label="Username" aria-describedby="basic-addon1" required="">
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                            <div class="input-group mb-3{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-success text-white" id="basic-addon2"><i class="ti-pencil"></i></span>
-                                </div>
-                                <input type="password" name="password" class="form-control form-control-lg" aria-label="Password" aria-describedby="basic-addon1" required="">
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
+                    <a href="javascript:void(0)" class="text-center db"><img src="{{asset('imgs/logo-oscviva-versao1.png')}}" alt="Home" /><br/>
+
+                    <div class="form-group m-t-40 {{ $errors->has('email') ? ' has-error' : '' }}">
+                        <div class="col-xs-12">
+                            
+                            <input id="email" type="email" placeholder="E-mail" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                        </div>
+                        @if ($errors->has('email'))
+                            <span class="label label-danger">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                    
+                    <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="password" required autofocus placeholder="Senha" name="password" value="{{ old('password') }}">
+                        </div>
+                        @if ($errors->has('password'))
+                            <span class="help-block text-center">
+                                <strong>{{ $errors->first('password') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="d-flex no-block align-items-center">
+                            <div class="ml-auto">
+                                <a href="{{ route('password.request') }}" id="to-recover" class="text-muted"><i class="fa fa-lock m-r-5"></i><strong> Esqueceu a Senha? </strong></a> 
                             </div>
                         </div>
                     </div>
-                    <div class="row border-top border-secondary">
-                        <div class="col-12">
-                            <div class="form-group">
-                                <div class="p-t-20">
-                                   <!-- <button class="btn btn-info" id="to-recover" type="button"><i class="fa fa-lock m-r-5"></i> Esqueceu a senha?</button> -->
-                                    <button class="btn btn-success float-right" type="submit">ENTRAR</button>
-                                </div>
-                            </div>
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Entrar</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
+                           <!-- <div class="social">
+                                <button class="btn btn-facebook" data-toggle="tooltip" title="Login com Facebook | Em breve"> <i aria-hidden="true" class="mdi mdi-facebook"></i> </button>
+                                <button class="btn btn-googleplus" data-toggle="tooltip" title="Login com Google | Em breve"> <i aria-hidden="true" class="mdi mdi-google"></i> </button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="form-group m-b-0">
+                        <div class="col-sm-12 text-center"> 
+
+                            <a href="{{ route('register') }}" class="text-primary m-l-5">  Ainda não tem uma conta? <strong> Cadastre-se </strong></a>
                         </div>
                     </div>
                 </form>
-            </div>
-            <div id="recoverform">
-                <div class="text-center">
-                    <span class="text-white">Enter your e-mail address below and we will send you instructions how to recover a password.</span>
-                </div>
-                <div class="row m-t-20">
-                    <!-- Form -->
-                    <form class="col-12" action="index.html">
-                        <!-- email -->
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text bg-danger text-white" id="basic-addon1"><i class="ti-email"></i></span>
-                            </div>
-                            <input type="text" class="form-control form-control-lg" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-                        <!-- pwd -->
-                        <div class="row m-t-20 p-t-20 border-top border-secondary">
-                            <div class="col-12">
-                                <a class="btn btn-success" href="#" id="to-login" name="action">Back To Login</a>
-                                <button class="btn btn-info float-right" type="button" name="action">Recover</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                
             </div>
         </div>
-    </div>
+    </section>
     <!-- ============================================================== -->
-    <!-- Login box.scss -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Page wrapper scss in scafholding.scss -->
+    <!-- End Wrapper -->
     <!-- ============================================================== -->
     <!-- ============================================================== -->
-    <!-- Page wrapper scss in scafholding.scss -->
+    <!-- All Jquery -->
     <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Right Sidebar -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Right Sidebar -->
-    <!-- ============================================================== -->
-</div>
-<!-- ============================================================== -->
-<!-- All Required js -->
-<!-- ============================================================== -->
-<script src="{{asset('vendor/matrix/assets/libs/jquery/dist/jquery.min.js')}}"></script>
-<!-- Bootstrap tether Core JavaScript -->
-<script src="{{asset('/vendor/matrix/assets/libs/popper.js/dist/umd/popper.min.js')}}"></script>
-<script src="{{asset('vendor/matrix/assets/libs/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-<!-- ============================================================== -->
-<!-- This page plugin js -->
-<!-- ============================================================== -->
-<script>
-
-    $('[data-toggle="tooltip"]').tooltip();
-    $(".preloader").fadeOut();
-    // ==============================================================
-    // Login and Recover Password
-    // ==============================================================
-    $('#to-recover').on("click", function() {
-        $("#loginform").slideUp();
-        $("#recoverform").fadeIn();
-    });
-    $('#to-login').click(function(){
-
-        $("#recoverform").hide();
-        $("#loginform").fadeIn();
-    });
-</script>
-
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('vendor/material-lite/assets/plugins/jquery/jquery.min.js') }}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{{ asset('vendor/material-lite/assets/plugins/bootstrap/js/tether.min.js') }}"></script>
+    <script src="{{ asset('vendor/material-lite/assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="{{ asset('vendor/material-lite/lite/js/jquery.slimscroll.js') }}"></script>
+    <!--Wave Effects -->
+    <script src="{{asset('vendor/material-lite/lite/js/waves.js') }}"></script>
+    <!--Menu sidebar -->
+    <script src="{{ asset('vendor/material-lite/lite/js/sidebarmenu.js') }}"></script>
+    <!--stickey kit -->
+    <script src="{{ asset('vendor/material-lite/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js') }}"></script>
+    <!--Custom JavaScript -->
+    <script src="{{asset('vendor/material-lite/lite/js/custom.min.js')}}"></script>
 </body>
 
 </html>
