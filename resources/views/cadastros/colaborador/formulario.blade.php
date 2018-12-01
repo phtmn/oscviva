@@ -39,7 +39,7 @@
                 <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#cargosSalarios" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down">Cargo/Salario</span></a> </li>
             </ul>
             <!-- Tab panes -->
-            <div class="tab-content tabcontent-border">
+            <div class="tab-content">
                 <div class="tab-pane active" id="dadosPessoais" role="tabpanel">
                     <div style="margin-top: 20px">
                         @include('cadastros.colaborador.tabDadosPessoais')

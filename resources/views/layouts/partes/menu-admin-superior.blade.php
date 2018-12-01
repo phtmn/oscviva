@@ -3,7 +3,7 @@
   <header class="topbar">
            <!--      <nav class="navbar top-navbar navbar-toggleable-sm navbar-light ">    
             <nav class="navbar top-navbar navbar-toggleable-sm navbar-light bg-inverse ">  --> 
-        <nav class="navbar top-navbar navbar-toggleable-sm navbar-light bg-success ">   
+        <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">   
                     <!-- ============================================================== -->
                 <!-- Logo -->
                 <!-- ============================================================== -->

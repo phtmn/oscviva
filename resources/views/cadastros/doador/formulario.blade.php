@@ -1,4 +1,4 @@
-@extends('layouts.matrix')
+@extends('layouts.admin')
 
 @section('breadcumb')
     <div class="page-breadcrumb">
@@ -38,7 +38,7 @@
                 <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#financeiro" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down">Financeiro</span></a> </li>
 
             </ul>
-            <div class="tab-content tabcontent-border">
+            <div class="tab-content">
                 <div class="tab-pane active" id="dadosPessoais" role="tabpanel">
                     <div style="margin-top: 20px">
                         @include('cadastros.doador.tabDadosPessoais')
