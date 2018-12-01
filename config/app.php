@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'pt-br',
+    'locale' => 'pt_br',
 
     /*
     |--------------------------------------------------------------------------
@@ -91,7 +91,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'pt_br',
 
     /*
     |--------------------------------------------------------------------------
@@ -168,6 +168,7 @@ return [
          * Package Service Providers...
          */
         Collective\Html\HtmlServiceProvider::class,
+        crocodicstudio\crudbooster\CRUDBoosterServiceProvider::class,        
         /*
          * Application Service Providers...
          */
