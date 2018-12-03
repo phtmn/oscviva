@@ -6,7 +6,7 @@
         <div class="panel-heading">
           Adicionar Colaborador
           </div>
-        <form method='post' action='{{CRUDBooster::mainpath('add-save')}}'>
+        <form method='post' action='{{route('colaborador.store')}}'>
         {{csrf_field()}}
         <div class="panel-body">
             <ul class="nav nav-tabs" role="tablist">

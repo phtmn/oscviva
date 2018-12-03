@@ -40,47 +40,47 @@
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Nome Completo','name'=>'nome_completo','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Data Nascimento','name'=>'data_nascimento','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Tipo Cadastro','name'=>'tipo_cadastro','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Sexo','name'=>'sexo','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Estado Civil','name'=>'estado_civil','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Tratamento','name'=>'tratamento','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'required|min:1|max:255|email|unique:colaboradores','width'=>'col-sm-10','placeholder'=>'Por favor digite um endereço de e-mail válido'];
-			$this->form[] = ['label'=>'Telefone1','name'=>'telefone1','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Telefone2','name'=>'telefone2','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Telefone3','name'=>'telefone3','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Cep','name'=>'cep','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Logradouro','name'=>'logradouro','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Cidade','name'=>'cidade','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Bairro','name'=>'bairro','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Uf','name'=>'uf','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Numero','name'=>'numero','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Complemento','name'=>'complemento','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Nome Pai','name'=>'nome_pai','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Nome Mae','name'=>'nome_mae','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Menor 14','name'=>'menor_14','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Qdt Filhos','name'=>'qtd_filhos','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Escolaridade','name'=>'escolaridade','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Situacao Escolaridade','name'=>'situacao_escolaridade','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Cpf Cnpj','name'=>'cpf_cnpj','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Rg','name'=>'rg','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Rg Emissao','name'=>'rg_emissao','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Rg OrgaoEmissor','name'=>'rg_orgaoEmissor','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Ctps','name'=>'ctps','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Reservista','name'=>'reservista','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Serie','name'=>'serie','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Categoria','name'=>'categoria','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Titulo','name'=>'titulo','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Zona','name'=>'zona','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Seccao','name'=>'seccao','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Pis','name'=>'pis','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Cnh','name'=>'cnh','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Cnh Emissao','name'=>'cnh_emissao','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Cnh Categoria','name'=>'cnh_categoria','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Cnh Vencimento','name'=>'cnh_vencimento','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Cargo Id','name'=>'cargo_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'cargos,nome'];
-			$this->form[] = ['label'=>'Cargo DtAdmissao','name'=>'cargo_dtAdmissao','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Nome Completo','name'=>'nome_completo','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Data Nascimento','name'=>'data_nascimento','type'=>'date','validation'=>'date','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Tipo Cadastro','name'=>'tipo_cadastro','type'=>'radio','width'=>'col-sm-10','dataenum'=>'Pessoa Física;Pessoa Jurídica'];
+			$this->form[] = ['label'=>'Sexo','name'=>'sexo','type'=>'select','width'=>'col-sm-10','dataenum'=>'Masculino;Feminino;Homossexual'];
+			$this->form[] = ['label'=>'Estado Civil','name'=>'estado_civil','type'=>'select','width'=>'col-sm-10','dataenum'=>'Solteiro(a);Casado(a);Divorciado(a);Viuvo(a);União Estável'];
+			$this->form[] = ['label'=>'Tratamento','name'=>'tratamento','type'=>'select','width'=>'col-sm-10','dataenum'=>'Senhor;Senhora;Senhorita;Exelentissimo;Doutor;Pelo nome'];
+			$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'min:1|max:255|email|unique:colaboradores','width'=>'col-sm-10','placeholder'=>'Por favor digite um endereço de e-mail válido'];
+			$this->form[] = ['label'=>'Telefone1','name'=>'telefone1','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Telefone2','name'=>'telefone2','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Telefone3','name'=>'telefone3','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Cep','name'=>'cep','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Logradouro','name'=>'logradouro','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Cidade','name'=>'cidade','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Bairro','name'=>'bairro','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Uf','name'=>'uf','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Numero','name'=>'numero','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Complemento','name'=>'complemento','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Nome Pai','name'=>'nome_pai','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Nome Mae','name'=>'nome_mae','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Menor 14','name'=>'menor_14','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Qdt Filhos','name'=>'qtd_filhos','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Escolaridade','name'=>'escolaridade','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Situacao Escolaridade','name'=>'situacao_escolaridade','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Cpf Cnpj','name'=>'cpf_cnpj','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Rg','name'=>'rg','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Rg Emissao','name'=>'rg_emissao','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Rg OrgaoEmissor','name'=>'rg_orgaoEmissor','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Ctps','name'=>'ctps','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Reservista','name'=>'reservista','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Serie','name'=>'serie','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Categoria','name'=>'categoria','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Titulo','name'=>'titulo','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Zona','name'=>'zona','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Seccao','name'=>'seccao','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Pis','name'=>'pis','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Cnh','name'=>'cnh','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Cnh Emissao','name'=>'cnh_emissao','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Cnh Categoria','name'=>'cnh_categoria','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Cnh Vencimento','name'=>'cnh_vencimento','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
+			// $this->form[] = ['label'=>'Cargo Id','name'=>'cargo_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'cargos,nome'];
+			// $this->form[] = ['label'=>'Cargo DtAdmissao','name'=>'cargo_dtAdmissao','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
 			// $this->form[] = ['label'=>'Cargo Salario','name'=>'cargo_salario','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			// $this->form[] = ['label'=>'Cargo HorTrabalho','name'=>'cargo_horTrabalho','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			// $this->form[] = ['label'=>'Cargo ValeTransporte','name'=>'cargo_valeTransporte','type'=>'number','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
@@ -88,7 +88,8 @@
 			// $this->form[] = ['label'=>'Cargo ValorValeTransporte','name'=>'cargo_valorValeTransporte','type'=>'number','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			// $this->form[] = ['label'=>'Cargo ContratoExperiencia','name'=>'cargo_contratoExperiencia','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			// $this->form[] = ['label'=>'Cargo LocalTrabalho','name'=>'cargo_localTrabalho','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			// # END FORM DO NOT REMOVE THIS LINE
+			
+			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
@@ -413,18 +414,18 @@
 
 	    }
 
-		public function getAdd() {
-			//Create an Auth
-			if(!CRUDBooster::isCreate() && $this->global_privilege==FALSE || $this->button_add==FALSE) {    
-			  CRUDBooster::redirect(CRUDBooster::adminPath(),trans("crudbooster.denied_access"));
-			}
+		// public function getAdd() {
+		// 	//Create an Auth
+		// 	if(!CRUDBooster::isCreate() && $this->global_privilege==FALSE || $this->button_add==FALSE) {    
+		// 	  CRUDBooster::redirect(CRUDBooster::adminPath(),trans("crudbooster.denied_access"));
+		// 	}
 			
-			$data = [];
-			$data['page_title'] = 'Add Data';
+		// 	$data = [];
+		// 	$data['page_title'] = 'Add Data';
 			
-			//Please use cbView method instead view method from laravel
-			$this->cbView('cadastros.colaborador.formulario',$data);
-		  }
+		// 	//Please use cbView method instead view method from laravel
+		// 	$this->cbView('cadastros.colaborador.formulario',$data);
+		//   }
 
 
 	    //By the way, you can still create your own method in here... :) 

@@ -9,7 +9,7 @@ Auth::routes();
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
 //cadastros
-Route::group(['namespace'=>'Cadastros','prefix'=>'admin','middleware'=>'auth'],function(){
+Route::group(['namespace'=>'Cadastros','prefix'=>'adm','middleware'=>'auth'],function(){
         Route::resource('colaborador','ColaboradorController');
         Route::resource('cargos','CargosController');
         Route::resource('doador','DoadorController');

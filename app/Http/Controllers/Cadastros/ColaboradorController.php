@@ -6,6 +6,7 @@ use App\Models\Cargo;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Colaborador;
+use CRUDBooster;
 
 class ColaboradorController extends Controller
 {
@@ -38,11 +39,12 @@ class ColaboradorController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+        //dd($request->all());
 
         $colaborador = Colaborador::create($request->all());
         if($colaborador){
-            return redirect()->route('colaborador.index');
+            return redirect()->to(CRUDBooster::adminpath(colaboradores));
         }else{
             return 'erro ao gravar';
         }
