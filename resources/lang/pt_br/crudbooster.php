@@ -199,6 +199,9 @@ return [
     'filter_from' => 'de',
     'filter_to' => 'para',
     'filter_sorting' => 'Sorting',
+    'filter_rows_total' => 'Totais de Paginas',
+    'filter_rows_to' => 'Registros',
+    'filter_rows_of' => 'De',
     // confirmation
     'confirmation_yes' => 'Sim!',
     'confirmation_no' => 'Não',

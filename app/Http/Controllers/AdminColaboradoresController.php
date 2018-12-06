@@ -155,7 +155,9 @@
 			| @parent_columns = Sparate with comma, e.g : name,created_at
 	        | 
 	        */
-	        $this->sub_module = array();
+			$this->sub_module = array();
+			$this->sub_module[] = ['label'=>'Documentos','path'=>'documentos','foreign_key'=>'colaborador_id',
+									'button_color'=>'primary','button_icon'=>'fa fa-file-o','parent_columns'=>'id,nome_completo'];
 
 
 	        /* 
@@ -349,7 +351,7 @@
 	    |
 	    */
 	    public function hook_before_add(&$postdata) {        
-	        //dd($postdata);
+	        dd($postdata);
 
 	    }
 
