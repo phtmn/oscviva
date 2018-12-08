@@ -4,12 +4,7 @@
         <!-- Sidebar navigation-->
         <nav class="sidebar-nav">
             <ul id="sidebarnav"> 
-                  <li>
-                    <a class="waves-effect waves-default" href="{{ route('dashboard') }}" aria-expanded="false">
-                        <i class="mdi mdi mdi-gauge "></i><span class="hide-menu ">Dashboard</span>
-                    </a>
-                </li> 
-
+               
 
                 <li>
 
