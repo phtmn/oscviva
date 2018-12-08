@@ -3,11 +3,9 @@
   <header class="topbar">
            <!--      <nav class="navbar top-navbar navbar-toggleable-sm navbar-light ">    
             <nav class="navbar top-navbar navbar-toggleable-sm navbar-light bg-inverse ">  --> 
-<<<<<<< HEAD
-        <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">   
-=======
+
         <nav class="navbar top-navbar navbar-toggleable-sm navbar-light bg-inverse ">   
->>>>>>> dev
+
                     <!-- ============================================================== -->
                 <!-- Logo -->
                 <!-- ============================================================== -->

@@ -8,13 +8,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('imgs/favicon.ico')}}">
-<<<<<<< HEAD
+
     {{--<title>{{ config('app.name', 'OSC VIVA') }}</title>--}}
     <title>OSCViva</title>
-=======
+
     {{--<title>{{ config('app.name', 'Laravel') }}</title>--}}
     <title>OSCVIVA</title>
->>>>>>> dev
+
 
     <link href="{{ asset('vendor/material-lite/assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/chartist.min.css') }}" rel="stylesheet">
