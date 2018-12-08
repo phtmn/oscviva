@@ -41,7 +41,7 @@
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
     
-    <section id="wrapper" class="login-register bg-success" style="background-image:url(imgs/fundo.png);">
+    <section id="wrapper" class="login-register bg-inverse" style="background-image:url(imgs/fundo.png);">
         <div class="login-box card">
         @if(Session::has('mensagem'))
             <div class="alert {{ Session::get('mensagem')['class'] }}" role="alert">
@@ -52,7 +52,7 @@
             <div class="card-body">
                 <form class="form-horizontal form-material" id="loginform" action="{{ route('login') }}" method="POST">
                     {{ csrf_field() }}
-                    <a href="javascript:void(0)" class="text-center db"><img src="{{asset('imgs/logo-oscviva-versao1.png')}}" alt="Home" /><br/>
+                <!--    <a href="javascript:void(0)" class="text-center db"><img src="{{asset('imgs/logo-oscviva-versao1.png')}}" alt="Home" /><br/> -->
 
                     <div class="form-group m-t-40 {{ $errors->has('email') ? ' has-error' : '' }}">
                         <div class="col-xs-12">
@@ -80,7 +80,7 @@
                     <div class="form-group">
                         <div class="d-flex no-block align-items-center">
                             <div class="ml-auto">
-                                <a href="{{ route('password.request') }}" id="to-recover" class="text-muted"><i class="fa fa-lock m-r-5"></i><strong> Esqueceu a Senha? </strong></a> 
+                           <!--     <a href="{{ route('password.request') }}" id="to-recover" class="text-muted"><i class="fa fa-lock m-r-5"></i><strong> Esqueceu a Senha? </strong></a> -->
                             </div>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
                     <div class="form-group m-b-0">
                         <div class="col-sm-12 text-center"> 
 
-                            <a href="{{ route('register') }}" class="text-primary m-l-5">  Ainda não tem uma conta? <strong> Cadastre-se </strong></a>
+                        <!--    <a href="{{ route('register') }}" class="text-primary m-l-5">  Ainda não tem uma conta? <strong> Cadastre-se </strong></a> -->
                         </div>
                     </div>
                 </form>

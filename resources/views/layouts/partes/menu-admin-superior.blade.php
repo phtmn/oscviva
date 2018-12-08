@@ -3,7 +3,7 @@
   <header class="topbar">
            <!--      <nav class="navbar top-navbar navbar-toggleable-sm navbar-light ">    
             <nav class="navbar top-navbar navbar-toggleable-sm navbar-light bg-inverse ">  --> 
-        <nav class="navbar top-navbar navbar-toggleable-sm navbar-light bg-success ">   
+        <nav class="navbar top-navbar navbar-toggleable-sm navbar-light bg-inverse ">   
                     <!-- ============================================================== -->
                 <!-- Logo -->
                 <!-- ============================================================== -->
@@ -14,8 +14,7 @@
                             <!-- <i class="fa fa-user">OSC</i>  -->
                             
                             <!-- Light Logo icon -->
-                           <!-- <img src="{{asset('imgs/logo-oscviva-versao1.png')}}" class="light-logo" alt="homepage" /></span> </a>  -->
-                           <!--   <img src="{{asset('imgs/coopvidapreta-deitada_11_topo.png')}}" class="light-logo" alt="homepage" /></span> </a> -->
+                            <img src="{{asset('imgs/logo-oscviva-versao1.png')}}" class="light-logo" alt="homepage" /></span> </a>                             <!--   <img src="{{asset('imgs/coopvidapreta-deitada_11_topo.png')}}" class="light-logo" alt="homepage" /></span> </a> -->
                         </b> 
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
