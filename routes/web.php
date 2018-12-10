@@ -14,7 +14,7 @@ Route::get('/filiados', 'Filiados\FiliadosController@index')->name('filiados');
 Route::get('/frotas', 'Frotas\FrotasController@index')->name('frotas');
 
 Route::get('/frotas/cadastro', 'Frotas\FrotasController@cadastro')->name('frotas.cadastro');
-
+Route::get('/frotas/cadveiculo', 'Frotas\FrotasController@cadveiculo')->name('frotas.cadveiculo');
 
 
 

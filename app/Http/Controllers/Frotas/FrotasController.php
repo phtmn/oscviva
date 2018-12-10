@@ -23,6 +23,13 @@ class FrotasController extends Controller
         $nome ='teste33333';
         return view ('frotas.cadastro', ['nome'=>$nome]);//
     }
+    
+    public function cadveiculo()
+    {
+        $nome = 'teste';
+        return view ('frotas.cadveiculo', ['nome'=>$nome]);//
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -6,7 +6,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('dashboard')}}">OSCVIVA</a></li>
                 <li class="breadcrumb-item active">Frotas</li>
-                <li class="breadcrumb-item active">Cadastrosss</li>
+                <li class="breadcrumb-item active">Cadastros</li>
             </ol>
         </div>       
     </div>
@@ -23,7 +23,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="message-box contact-box">
-                                   <a href="#"> <h2 class="add-ct-btn"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark">add</button></h2></a>
+                                   <a href="{{route('frotas.cadveiculo')}}"> <h2 class="add-ct-btn"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark">add</button></h2></a>
                               
                                 </div>
                                  <h2 class="font-light m-b-0"></h2>
@@ -46,11 +46,12 @@
                 <table class="table">
                     <thead>
                         <th>#</th>
-                        <th>Nome Completo</th>
-                        <th>Email</th>
-                        <th>Data Cadastro</th>
-                        <th>Telefone</th>
-                        <th>Actions</th>
+                        <th>Ano</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Placa</th>
+                        <th>Chassi</th>
+                        <th>Renavan</th>
                     </thead>
                     <tbody>
                    
