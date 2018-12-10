@@ -15,6 +15,21 @@
                         <li><a href="{{route('cargos.index')}}">Cargos</a></li>
                     </ul>
                 </li>
+
+                 <li>
+
+                    <a class="waves-effect waves-default" href="{{route('administrativo')}}" aria-expanded="false"><i class="fa fa-archive"></i><span class="hide-menu">Administrativo</span></a>                  
+                </li>
+
+                <li>
+
+                    <a class="waves-effect waves-default" href="{{route('filiados')}}" aria-expanded="false"><i class="fa fa-child"></i><span class="hide-menu">Filiados</span></a>                 
+                </li>
+
+                <li>
+
+                    <a class="waves-effect waves-default" href="{{route('frotas')}}" aria-expanded="false"><i class="fa fa-truck"></i><span class="hide-menu">Frotas</span></a>                 
+                </li>
                 
                          
              

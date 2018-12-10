@@ -6,7 +6,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+
+Route::get('/administrativo', 'Administrativo\AdministrativoController@index')->name('administrativo'); 
+Route::get('/filiados', 'Filiados\FiliadosController@index')->name('filiados'); 
+Route::get('/frotas', 'Frotas\FrotasController@index')->name('frotas');
+
+
+
+
+
+Route::get('/produtos', 'ProdutosController@index');
 
 //cadastros
 Route::group(['namespace'=>'Cadastros','prefix'=>'admin','middleware'=>'auth'],function(){
@@ -17,4 +28,6 @@ Route::group(['namespace'=>'Cadastros','prefix'=>'admin','middleware'=>'auth'],f
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+
+

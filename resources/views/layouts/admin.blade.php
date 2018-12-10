@@ -9,10 +9,8 @@
 
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('imgs/favicon.ico')}}">
 
-    {{--<title>{{ config('app.name', 'OSC VIVA') }}</title>--}}
-    <title>OSCViva</title>
 
-    {{--<title>{{ config('app.name', 'Laravel') }}</title>--}}
+    <title>{{ config('app.name', 'Laravel') }}</title>
     <title>OSCVIVA</title>
 
 

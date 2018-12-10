@@ -16,7 +16,7 @@
                             <!-- <i class="fa fa-user">OSC</i>  -->
                             
                             <!-- Light Logo icon -->
-                            <img src="{{asset('imgs/logo-oscviva-versao1.png')}}" class="light-logo" alt="homepage" /></span> </a>                             <!--   <img src="{{asset('imgs/coopvidapreta-deitada_11_topo.png')}}" class="light-logo" alt="homepage" /></span> </a> -->
+                            <img src="{{asset('imgs/logo-oscviva-versao123.png')}}" class="light-logo" alt="homepage" /></span> </a>                             <!--   <img src="{{asset('imgs/coopvidapreta-deitada_11_topo.png')}}" class="light-logo" alt="homepage" /></span> </a> -->
                         </b> 
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
