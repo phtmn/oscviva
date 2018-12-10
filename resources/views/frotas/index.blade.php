@@ -22,7 +22,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="message-box contact-box">
-                                    <h2 class="add-ct-btn"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark">+</button></h2>
+                                   <a href="{{route('frotas.cadastro')}}"> <h2 class="add-ct-btn"><button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark">+</button></h2></a>
                               
                                 </div>
                                  <h2 class="font-light m-b-0"></h2>

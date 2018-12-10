@@ -13,11 +13,12 @@ Route::get('/administrativo', 'Administrativo\AdministrativoController@index')->
 Route::get('/filiados', 'Filiados\FiliadosController@index')->name('filiados'); 
 Route::get('/frotas', 'Frotas\FrotasController@index')->name('frotas');
 
+Route::get('/frotas/cadastro', 'Frotas\FrotasController@cadastro')->name('frotas.cadastro');
 
 
 
 
-Route::get('/produtos', 'ProdutosController@index');
+
 
 //cadastros
 Route::group(['namespace'=>'Cadastros','prefix'=>'admin','middleware'=>'auth'],function(){

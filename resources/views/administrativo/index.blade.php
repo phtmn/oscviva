@@ -19,7 +19,7 @@
                             <div class="card-body little-profile text-center">
                             
                             
-                                <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded">Colaborador</a>
+                                <a href="{{route('colaborador.index')}}" class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded">Colaborador</a>
 
                                 <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded">Voluntário</a>
                          

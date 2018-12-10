@@ -18,6 +18,11 @@ class FrotasController extends Controller
         return view ('frotas.index', ['nome'=>$nome]);//
     }
 
+    public function cadastro()
+    {
+        $nome ='teste33333';
+        return view ('frotas.cadastro', ['nome'=>$nome]);//
+    }
     /**
      * Show the form for creating a new resource.
      *
