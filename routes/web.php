@@ -25,6 +25,7 @@ Route::group(['namespace'=>'Cadastros','prefix'=>'admin','middleware'=>'auth'],f
         Route::resource('colaborador','ColaboradorController');
         Route::resource('cargos','CargosController');
         Route::resource('doador','DoadorController');
+        Route::resource('cadveiculo', 'FrotasController');
 });
 
 Auth::routes();

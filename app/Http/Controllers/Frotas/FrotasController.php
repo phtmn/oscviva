@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frotas;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Frotas;
 
 class FrotasController extends Controller
 {
@@ -48,7 +49,12 @@ class FrotasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $frotas = Frotas::create($request->all());
+        if($frotas){
+            return redirect()->route('frotas.cadveiculo');
+        }else{
+            return 'erro ao gravar';
+        }
     }
 
     /**
@@ -59,7 +65,7 @@ class FrotasController extends Controller
      */
     public function show($id)
     {
-        //
+        return view ('frotas.cadveiculo');
     }
 
     /**
