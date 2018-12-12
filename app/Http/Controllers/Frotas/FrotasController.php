@@ -38,7 +38,8 @@ class FrotasController extends Controller
      */
     public function create()
     {
-        //
+        $frotas = Frotas::all();
+        return view('frotas.cadveiculo',compact('frotas.cadveiculo'));
     }
 
     /**
