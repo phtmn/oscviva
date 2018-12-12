@@ -48,7 +48,7 @@
 			$this->form[] = ['label'=>'Tipo Cadastro','name'=>'tipo_cadastro','type'=>'radio','width'=>'col-sm-10','dataenum'=>'Pessoa Física;Pessoa Jurídica'];
 			$this->form[] = ['label'=>'Sexo','name'=>'sexo','type'=>'select','width'=>'col-sm-10','dataenum'=>'Masculino;Feminino;Homossexual'];
 			$this->form[] = ['label'=>'Estado Civil','name'=>'estado_civil','type'=>'select','width'=>'col-sm-10','dataenum'=>'Solteiro(a);Casado(a);Divorciado(a);Viuvo(a);União Estável'];
-			$this->form[] = ['label'=>'Tratamento','name'=>'tratamento','type'=>'select','width'=>'col-sm-5','dataenum'=>'Senhor;Senhora;Senhorita;Excelentissimo;Doutor;Pelo Nome'];
+			$this->form[] = ['label'=>'Tratamento','name'=>'tratamento','type'=>'select','width'=>'col-sm-5','dataenum'=>'Senhor;Senhora;Senhorita;Excelentissimo;Doutor;Pelo Nome	'];
 			$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','width'=>'col-sm-10','placeholder'=>'Por favor digite um endereço de e-mail válido'];
 			$this->form[] = ['label'=>'Telefone1','name'=>'telefone1','type'=>'text','validation'=>'min:1|max:255|string','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Telefone2','name'=>'telefone2','type'=>'text','width'=>'col-sm-10'];
