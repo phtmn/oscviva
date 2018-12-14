@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>OSCViva - Sistema de Captação de Doações</title>
 
     <!-- Bootstrap core CSS -->
     <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -18,15 +18,16 @@
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
-        <a class="navbar-brand" href="{{url('landing')}}">Sua ONG</a>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info">
+        <div class="container">
+        <a class="navbar-brand" href="{{url('/')}}">Sua ONG</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{{url('landing')}}">Pagina <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contato</a>
@@ -35,10 +36,8 @@
               <a class="nav-link"  href="{{url('checkout')}}">Doar</a>
             </li>
           </ul>
-          <!-- <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form> -->
+          
+        </div>
         </div>
       </nav>
     </header>
@@ -53,17 +52,17 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+            <img class="first-slide" src="https://www.semprefamilia.com.br/wp-content/uploads/2015/05/bigstock-Outdoor-Portrait-Of-Family-Hav-653648892-1180x472.jpg" alt="First slide">
             <div class="container">
               <div class="carousel-caption text-left">
-                <h1>Example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+                <h1>Familia</h1>
+                <p>Algum texto que pode ser definido no painel administrativo!</p>
+                <p><a class="btn btn-lg btn-success" href="#" role="button">Doe Hoje!</a></p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+            <img class="second-slide" src="https://www.semprefamilia.com.br/wp-content/uploads/2015/05/bigstock-Outdoor-Portrait-Of-Family-Hav-653648892-1180x472.jpg" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
                 <h1>Another example headline.</h1>
@@ -73,7 +72,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+            <img class="third-slide" src="https://www.semprefamilia.com.br/wp-content/uploads/2015/05/bigstock-Outdoor-Portrait-Of-Family-Hav-653648892-1180x472.jpg" alt="Third slide">
             <div class="container">
               <div class="carousel-caption text-right">
                 <h1>One more for good measure.</h1>
@@ -103,19 +102,19 @@
         <!-- Three columns of text below the carousel -->
         <div class="row">
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="http://icons.iconarchive.com/icons/graphicloads/100-flat/256/home-icon.png" alt="Generic placeholder image" width="140" height="140">
             <h2>Titulo 1</h2>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png" alt="Generic placeholder image" width="140" height="140">
             <h2>Titulo 2</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="https://www.import.io/wp-content/uploads/2018/04/Rocket-icon-blue.png" alt="Generic placeholder image" width="140" height="140">
             <h2>Titulo 3</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
@@ -132,7 +131,7 @@
       <div class="card-deck mb-3 text-center">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Free</h4>
+            <h4 class="my-0 font-weight-normal">Avulsa</h4>
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
@@ -142,12 +141,12 @@
               <li>Email support</li>
               <li>Help center access</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-outline-success">Sign up for free</button>
+            <button type="button" class="btn btn-lg btn-block btn-outline-success">Doar agora</button>
           </div>
         </div>
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Pro</h4>
+            <h4 class="my-0 font-weight-normal">Mensal</h4>
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
@@ -157,12 +156,12 @@
               <li>Priority email support</li>
               <li>Help center access</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-success">Get started</button>
+            <button type="button" class="btn btn-lg btn-block btn-success">Fazer Agora</button>
           </div>
         </div>
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Enterprise</h4>
+            <h4 class="my-0 font-weight-normal">Personalizada</h4>
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
@@ -172,7 +171,7 @@
               <li>Phone and email support</li>
               <li>Help center access</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-success">Contact us</button>
+            <button type="button" class="btn btn-lg btn-block btn-success">Fale Conosco</button>
           </div>
         </div>
       </div>
@@ -182,11 +181,11 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">Titulo<span class="text-muted">Subtitulo.</span></h2>
+            <p class="lead">Esse texto pode ser e vai ser administrado pelo painel.</p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" src="https://polenfiles.blob.core.windows.net/ongs/ong-portadoresdaalegria-logo.png" alt="Generic placeholder image">
           </div>
         </div>
 
@@ -194,11 +193,11 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">Titulo<span class="text-muted">Subtitulo.</span></h2>
+            <p class="lead">Esse texto pode ser e vai ser administrado pelo painel.</p>
           </div>
           <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" src="https://s3-sa-east-1.amazonaws.com/projetos-artes/fullsize%2F2011%2F04%2F10%2F15%2FWDL-Mascote-3036_1874_035228245_820982864.jpg" alt="Generic placeholder image">
           </div>
         </div>
 
@@ -206,11 +205,11 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">Titulo<span class="text-muted">Subtitulo.</span></h2>
+            <p class="lead">Esse texto pode ser e vai ser administrado pelo painel.</p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1CtV_kbYuKAVPBygx7mnO9wLlF09u2-tZBzAK9OYG-_pU3j8b" alt="Generic placeholder image">
           </div>
         </div>
 

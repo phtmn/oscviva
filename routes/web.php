@@ -1,16 +1,9 @@
 <?php
 
-Route::view('/landing','landingPage');
-Route::view('/checkout','checkout');
-
-
-Route::get('/', function () {
-    return redirect()->route('login');
-});
-
 Auth::routes();
 
-Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+Route::get('/', 'Site\SiteController@index')->name('site');
+Route::get('/doar','Site\SiteController@formPagar')->name('pagar');
 
 //cadastros
 Route::group(['namespace'=>'Cadastros','prefix'=>'adm','middleware'=>'auth'],function(){
@@ -19,6 +12,6 @@ Route::group(['namespace'=>'Cadastros','prefix'=>'adm','middleware'=>'auth'],fun
         Route::resource('doador','DoadorController');
 });
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+
