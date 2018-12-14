@@ -1,5 +1,9 @@
 <?php
 
+Route::view('/landing','landingPage');
+Route::view('/checkout','checkout');
+
+
 Route::get('/', function () {
     return redirect()->route('login');
 });
