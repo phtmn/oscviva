@@ -3,33 +3,27 @@
 Route::get('/', function () {
     return redirect()->route('login');
 });
-
 Auth::routes();
+Route::get('/dashboard','DashboardController@index')->name('dashboard')->middleware('auth');
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/dashboard', 'HomeController@index')->name('dashboard');
-
-Route::get('/administrativo', 'Administrativo\AdministrativoController@index')->name('administrativo'); 
-Route::get('/filiados', 'Filiados\FiliadosController@index')->name('filiados'); 
-Route::get('/frotas', 'Frotas\FrotasController@index')->name('frotas');
-
-Route::get('/frotas/cadastro', 'Frotas\FrotasController@cadastro')->name('frotas.cadastro');
-Route::get('/frotas/cadveiculo', 'Frotas\FrotasController@cadveiculo')->name('frotas.cadveiculo');
+//Todas rotas desse grupo estão protegidas por autenticação!!!
+Route::group(['middleware'=>'auth','prefix'=>'admin'], function(){
+    
 
 
+    Route::group(['namespace'=>'Administrativo'],function(){
+        // Criar aqui dentro todos os controles referente ao modulo administrativo
+        Route::resource('pessoas','PessoasController');
 
+    });
 
+    Route::group(['namespace'=>'Financeiro'],function(){
+        // Criar aqui dentro todos os controles referente ao modulo financeiro
 
-//cadastros
-Route::group(['namespace'=>'Cadastros','prefix'=>'admin','middleware'=>'auth'],function(){
-        Route::resource('colaborador','ColaboradorController');
-        Route::resource('cargos','CargosController');
-        Route::resource('doador','DoadorController');
-        Route::resource('frotas.cadveiculo', 'FrotasController');
+    });
+
+    Route::group(['namespace'=>'Captacao'],function(){
+        // Criar aqui dentro todos os controles referente ao modulo captaçao de recursos
+
+    });
 });
-
-Auth::routes();
-
-
-
-

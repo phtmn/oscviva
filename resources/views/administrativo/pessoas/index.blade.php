@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 
-
 @section('content')
 <div class="row page-titles">
         <div class="col-md-5 col-8 align-self-center">
-            <h3 class="text-themecolor">Doadores</h3>
+            <h3 class="text-themecolor">Colaborador</h3>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
-                <li class="breadcrumb-item active">Doadores</li>
+                <li class="breadcrumb-item"><a href="{{route('dashboard')}}">OSCVIVA</a></li>
+                <li class="breadcrumb-item"><a href="#">Administrativo</a></li>
+                <li class="breadcrumb-item active">Pessoas</li>
             </ol>
         </div>
         <!-- <div class="col-md-7 col-4 align-self-center">
@@ -39,7 +39,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <a href="{{route('doador.create')}}" class="btn btn-info">Cadastrar Doador</a>
+                <a href="{{route('pessoas.create')}}" class="btn btn-info">Cadastrar Pessoa</a>
             </div>
                         
             <div class="card-body">
@@ -64,7 +64,7 @@
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mais opções</button>
                                     <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 35px, 0px); top: 0px; left: 0px; will-change: transform;">
-                                        <a class="dropdown-item" href="{{route('doador.edit',$d->id)}}">Editar</a>
+                                        <a class="dropdown-item" href="{{route('pessoas.edit',$d->id)}}">Editar</a>
                                         <a class="dropdown-item" href="#"><i class="fa fa-trash"></i> Excluir</a>
                                     </div>
                                 </div>
@@ -75,6 +75,7 @@
                     @endforelse
                     </tbody>
                 </table>
+
             </div>
         </div>
     </div>

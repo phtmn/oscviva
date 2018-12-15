@@ -4,7 +4,7 @@
 <div class="form-group col-6">
         {!! Form::label('nome_que_vai_exibir') !!}
         <span class="text-muted">*</span>
-        {!! Form::text('nome_do_campo_no_banco',null,['class'=>'form-control','required'=>'true','placehoder'=>'texto']) !!}
+        {!! Form::text('nome_do_campo_no_banco',null,['class'=>'form-control','placehoder'=>'texto']) !!}
 </div>
 
 <div class="form-group col-3">

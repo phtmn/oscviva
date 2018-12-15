@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Filiados;
+namespace App\Http\Controllers\Administrativo;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Pessoa;
 
-class FiliadosController extends Controller
+class PessoasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,8 @@ class FiliadosController extends Controller
      */
     public function index()
     {
-        $nome ='teste22233';
-        return view ('filiados.index', ['nome'=>$nome]);////
+        $data = Pessoa::latest()->get();
+        return view ('administrativo.pessoas.index',compact('data'));
     }
 
     /**
@@ -25,7 +26,7 @@ class FiliadosController extends Controller
      */
     public function create()
     {
-        //
+        return view ('administrativo.pessoas.formulario');
     }
 
     /**
@@ -36,7 +37,8 @@ class FiliadosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $pessoa = Pessoa::create($request->all());
+       return 'cadastrou';
     }
 
     /**
