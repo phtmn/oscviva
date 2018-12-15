@@ -3,11 +3,11 @@
 @section('content')
 <div class="row page-titles">
         <div class="col-md-5 col-8 align-self-center">
-            <h3 class="text-themecolor">Colaborador</h3>
+            <h3 class="text-themecolor">Administrativo</h3>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('dashboard')}}">OSCVIVA</a></li>
-                <li class="breadcrumb-item"><a href="#">Administrativo</a></li>
-                <li class="breadcrumb-item active">Pessoas</li>
+                <li class="breadcrumb-item active">Administrativo</li>
+                <li class="breadcrumb-item active">Gestão de Pessoas</li>
             </ol>
         </div>
         <!-- <div class="col-md-7 col-4 align-self-center">
@@ -39,7 +39,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <a href="{{route('pessoas.create')}}" class="btn btn-info">Cadastrar Pessoa</a>
+                <a href="{{route('pessoas.create')}}" class="btn btn-info">Cadastrar</a>
             </div>
                         
             <div class="card-body">
@@ -71,7 +71,8 @@
                             </td>
                         </tr>
                     @empty
-                        <p>Não há registros</p>
+                    <label class="label label-danger">Ainda não há registros!</label>
+                                <hr>
                     @endforelse
                     </tbody>
                 </table>

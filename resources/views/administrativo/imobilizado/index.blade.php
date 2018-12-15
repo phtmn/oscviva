@@ -3,14 +3,14 @@
 @section('content')
 <div class="row page-titles">
         <div class="col-md-5 col-8 align-self-center">
-            <h3 class="text-themecolor">Colaborador</h3>
+             <h3 class="text-themecolor">Administrativo</h3>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('dashboard')}}">OSCVIVA</a></li>
-                <li class="breadcrumb-item"><a href="#">Administrativo</a></li>
-                <li class="breadcrumb-item active">Pessoas</li>
+                <li class="breadcrumb-item active">Administrativo</li>
+                <li class="breadcrumb-item active">Imobilizado</li>
             </ol>
         </div>
-        <!-- <div class="col-md-7 col-4 align-self-center">
+   <!--      <div class="col-md-7 col-4 align-self-center">
             <div class="d-flex m-t-10 justify-content-end">
                 <div class="d-flex m-r-20 m-l-10 hidden-md-down">
                     <div class="chart-text m-r-10">
@@ -38,9 +38,46 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            
+            <div class="card-header">
+                <a href="{{route('pessoas.create')}}" class="btn btn-info">Cadastrar</a>
+            </div>
                         
-           
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <th>#</th>
+                        <th>Código</th>
+                        <th>Descrição</th>
+                        <th>Tipo</th>
+                        <th>Estado</th>
+                        <th>!</th>
+                    </thead>
+                    <tbody>
+                    @forelse($data as $d)
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mais opções</button>
+                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 35px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                        <a class="dropdown-item" href="{{route('pessoas.edit',$d->id)}}">Editar</a>
+                                        <a class="dropdown-item" href="#"><i class="fa fa-trash"></i> Excluir</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    @empty
+                        <label class="label label-danger">Ainda não há registros!</label>
+                                <hr>
+                    @endforelse
+                    </tbody>
+                </table>
+
+            </div>
         </div>
     </div>
 </div>

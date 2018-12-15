@@ -8,7 +8,7 @@
 
                 <li>
 
-                    <a class="has-arrow waves-effect waves-default" href="#" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">Administrativo</span></a>
+                    <a class="has-arrow waves-effect waves-default" href="#" aria-expanded="false"><i class="mdi mdi-apps"></i><span class="hide-menu">Administrativo</span></a>
                     <ul aria-expanded="false" class="collapse">
                         
                         <li><a href="{{route('pessoas.index')}}">Gestão de Pessoas</a></li>
