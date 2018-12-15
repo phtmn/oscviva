@@ -11,9 +11,9 @@
                     <a class="has-arrow waves-effect waves-default" href="#" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">Administrativo</span></a>
                     <ul aria-expanded="false" class="collapse">
                         
-                        <li><a href="{{route('pessoas.index')}}">Pessoas</a></li>
-                        <li><a href="#">Imobilizado</a></li>
-                        <li><a href="#">Institucional</a></li>
+                        <li><a href="{{route('pessoas.index')}}">Gestão de Pessoas</a></li>
+                        <li><a href="{{route('imobilizado.index')}}">Imobilizado</a></li>
+                        <li><a href="{{route('institucional.index')}}">Institucional</a></li>
                     </ul>
                 </li>
 

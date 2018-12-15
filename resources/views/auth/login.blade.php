@@ -41,7 +41,9 @@
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
     
+
     <section id="wrapper" class="login-register bg-inverse" style="background-image:url(imgs/fundo.png);">
+         <a href="javascript:void(0)" class="text-center db"><img src="{{asset('imgs/logo-oscviva-versao1.png')}}" alt="Home" /><br/>
         <div class="login-box card">
         @if(Session::has('mensagem'))
             <div class="alert {{ Session::get('mensagem')['class'] }}" role="alert">
@@ -52,7 +54,7 @@
             <div class="card-body">
                 <form class="form-horizontal form-material" id="loginform" action="{{ route('login') }}" method="POST">
                     {{ csrf_field() }}
-                <!--    <a href="javascript:void(0)" class="text-center db"><img src="{{asset('imgs/logo-oscviva-versao1.png')}}" alt="Home" /><br/> -->
+                  <!-- <a href="javascript:void(0)" class="text-center db"><img src="{{asset('imgs/logo-oscviva-versao1.png')}}" alt="Home" /><br/> -->
 
                     <div class="form-group m-t-40 {{ $errors->has('email') ? ' has-error' : '' }}">
                         <div class="col-xs-12">

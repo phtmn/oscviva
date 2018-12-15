@@ -13,6 +13,8 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'], function(){
     Route::group(['namespace'=>'Administrativo'],function(){
         // Criar aqui dentro todos os controles referente ao modulo administrativo
         Route::resource('pessoas','PessoasController');
+        Route::resource('institucional','InstitucionalController');
+        Route::resource('imobilizado','ImobilizadoController');
 
     });
 
