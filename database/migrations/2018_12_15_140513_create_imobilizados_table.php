@@ -19,7 +19,7 @@ class CreateImobilizadosTable extends Migration
             $table->string('tipo_cadastro')->nullable();
             $table->string('estado_conservacao')->nullable();
             $table->string('status')->nullable();
-            $table->decimal('valor', 10,2)->nullable();
+            $table->decimal('valor', 10,2)->default(0)->nullable();
             $table->date('data_registro')->nullable();
             $table->date('manutencao_prevista')->nullable();
             $table->timestamps();
