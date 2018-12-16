@@ -80,6 +80,6 @@ class CreatePessoasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('colaboradores');
+        Schema::dropIfExists('pessoas');
     }
 }

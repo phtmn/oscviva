@@ -15,6 +15,13 @@ class CreateImobilizadosTable extends Migration
     {
         Schema::create('imobilizados', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('descricao')->nullable();
+            $table->string('tipo_cadastro')->nullable();
+            $table->string('estado_conservacao')->nullable();
+            $table->string('status')->nullable();
+            $table->string('valor')->nullable();
+            $table->date('data_registro')->nullable();
+            $table->date('manutencao_prevista')->nullable();
             $table->timestamps();
         });
     }
