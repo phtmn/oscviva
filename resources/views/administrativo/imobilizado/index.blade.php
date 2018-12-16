@@ -39,7 +39,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <a href="{{route('pessoas.create')}}" class="btn btn-info">Cadastrar</a>
+                <a href="{{route('imobilizado.create')}}" class="btn btn-info">Cadastrar</a>
             </div>
                         
             <div class="card-body">

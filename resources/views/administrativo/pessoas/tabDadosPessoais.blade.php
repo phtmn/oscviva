@@ -42,7 +42,7 @@
     </div>
 
     <div class="form-group col-6">
-        {!! Form::label('Email') !!}
+        {!! Form::label('E-mail') !!}
         {!! Form::text('email',null,['class'=>'form-control']) !!}
     </div>
 </div>

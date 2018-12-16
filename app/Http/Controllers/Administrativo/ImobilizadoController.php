@@ -26,7 +26,7 @@ class ImobilizadoController extends Controller
      */
     public function create()
     {
-        //
+        return view ('administrativo.imobilizado.formulario');
     }
 
     /**
