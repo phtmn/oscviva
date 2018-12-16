@@ -72,7 +72,7 @@ class CreatePessoasTable extends Migration
             $table->timestamps(); //inclui campos ['created_at','updated_at']
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *
