@@ -8,5 +8,5 @@ class Imobilizado extends Model
 {
     protected $table = "imobilizados";
 
-    protected $fillable = [ 'descricao','tipo_cadastro','estado_conservacao','status','valor','data_registro', 'manutencao_prevista'];
+    protected $fillable = ['codigo','descricao','tipo_cadastro','estado_conservacao','status','valor','data_registro', 'manutencao_prevista'];
 }

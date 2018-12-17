@@ -13,7 +13,7 @@
                         
                         <li><a href="{{route('pessoas.index')}}">Gestão de Pessoas</a></li>
                         <li><a href="{{route('imobilizado.index')}}">Imobilizado</a></li>
-                        <li><a href="{{route('institucional.index')}}">Institucional</a></li>
+                        <li><a href="{{route('instituicao.index')}}">Instituiçao</a></li>
                     </ul>
                 </li>
 

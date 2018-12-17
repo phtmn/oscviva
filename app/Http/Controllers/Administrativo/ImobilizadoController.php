@@ -37,7 +37,8 @@ class ImobilizadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $imobilizado = Imobilizado::create($request->all());
+        return redirect()->route('imobilizado.index');
     }
 
     /**
@@ -59,7 +60,8 @@ class ImobilizadoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $imobilizado = Imobilizado::find($id);
+        return view('administrativo.imobilizado.formulario',compact('imobilizado'));
     }
 
     /**
@@ -71,7 +73,8 @@ class ImobilizadoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $imobilizado = Imobilizado::find($id)->update($request->all());
+        return redirect()->route('imobilizado.index');
     }
 
     /**

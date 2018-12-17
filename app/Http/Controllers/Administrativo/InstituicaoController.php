@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Administrativo;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Institucional;
+use App\Models\Instituicao;
 
-class InstitucionalController extends Controller
+class InstituicaoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class InstitucionalController extends Controller
      */
     public function index()
     {
-         $data = Institucional::latest()->get();
-        return view ('administrativo.institucional.index',compact('data'));
+         $data = Instituicao::latest()->get();
+        return view ('administrativo.instituicao.index',compact('data'));
     }
 
     /**

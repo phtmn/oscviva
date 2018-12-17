@@ -13,7 +13,7 @@ class CreateInstitucionalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('institucionals', function (Blueprint $table) {
+        Schema::create('instituicao', function (Blueprint $table) {
             //dados cadastrais
             $table->increments('id');
             $table->string('razao_social')->nullable();
@@ -49,24 +49,8 @@ class CreateInstitucionalsTable extends Migration
             $table->string('cnae_secundario3');
             $table->string('cnae_secundario4');
             $table->string('cnae_secundario5');
-            $table->string('cnae_secundario6');
-            //certidões
-            $table->string('descricao_certidao')->nullable();
-            $table->date('data_emissao')->nullable();
-            $table->date('data_vencimento');
-            $table->string('status')->nullable();
-            $table->string('observacao_certidao');
-            //atas
-            $table->string('descricao_ata')->nullable();
-            $table->date('data_emissaoata')->nullable();
-            $table->string('tipo_ata');
-            $table->string('observacao_ata');
-            //diretoria
-            $table->string('colaborador')->nullable();
-            $table->date('data_posse')->nullable();
-            $table->date('data_termino')->nullable();
-            $table->string('chapa')->nullable();
-            $table->string('observacao_diretoria')->nullable();
+            $table->string('cnae_secundario6');         
+           
             $table->timestamps();
         });
     }
@@ -78,6 +62,6 @@ class CreateInstitucionalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('institucionals');
+        Schema::dropIfExists('instituicao');
     }
 }

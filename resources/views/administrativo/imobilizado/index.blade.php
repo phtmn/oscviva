@@ -45,26 +45,25 @@
             <div class="card-body">
                 <table class="table">
                     <thead>
-                        <th>#</th>
                         <th>Código</th>
                         <th>Descrição</th>
                         <th>Tipo</th>
                         <th>Estado</th>
-                        <th>!</th>
+                        <th>Valor</th>                        
                     </thead>
                     <tbody>
                     @forelse($data as $d)
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$d->codigo}}</td>
+                            <td>{{$d->descricao}}</td>
+                            <td>{{$d->tipo_cadastro}}</td>
+                            <td>{{$d->estado_conservacao}}</td>
+                            <td>{{$d->valor}}</td>
                             <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mais opções</button>
                                     <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 35px, 0px); top: 0px; left: 0px; will-change: transform;">
-                                        <a class="dropdown-item" href="{{route('pessoas.edit',$d->id)}}">Editar</a>
+                                        <a class="dropdown-item" href="{{route('imobilizado.edit',$d->id)}}">Editar</a>
                                         <a class="dropdown-item" href="#"><i class="fa fa-trash"></i> Excluir</a>
                                     </div>
                                 </div>

@@ -7,7 +7,7 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{route('dashboard')}}">OSCVIVA</a></li>
         <li class="breadcrumb-item active">Administrativo</li>
-        <li class="breadcrumb-item active">Institucional</li>
+        <li class="breadcrumb-item active">Instituicao</li>
     </ol>
 </div>
         <!-- <div class="col-md-7 col-4 align-self-center">

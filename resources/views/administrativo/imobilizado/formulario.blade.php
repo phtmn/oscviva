@@ -39,11 +39,11 @@
        <h1> CADASTRAR </h1>
        <hr>           
    </div>
-   @if( isset($pessoa) )
-   {{ Form::model($pessoa,['route'=> ['pessoas.update',$pessoa->id] ]) }}
+   @if( isset($imobilizado) )
+   {{ Form::model($imobilizado,['route'=> ['imobilizado.update',$imobilizado->id] ]) }}
    <input type="hidden" value="PUT" name="_method">
    @else
-   {{ Form::open(['route'=>'pessoas.store']) }}
+   {{ Form::open(['route'=>'imobilizado.store']) }}
 
    @endif
    <div class="card-body">
@@ -55,7 +55,7 @@
             </div>
             <div class="form-group col-3">
                 {!! Form::label('Código') !!}
-                {!! Form::text('XXXXXXXX',null,['class'=>'form-control']) !!}
+                {!! Form::text('codigo',null,['class'=>'form-control']) !!}
             </div>
 
             <div class=" form-group col-7">
