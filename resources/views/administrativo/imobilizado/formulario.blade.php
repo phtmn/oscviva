@@ -33,7 +33,21 @@
         </ol>
     </div>
 </div>
+    <div class="container">
+        @if ($errors->any())
+            <div class="container">
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        @endif
 
+        
+    </div>  
 <div class="card">
     <div class="card-header">
        <h1> CADASTRAR </h1>

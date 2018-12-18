@@ -37,6 +37,11 @@
 
 <div class="row">
     <div class="col-12">
+    @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="card">
             <div class="card-header">
                 <a href="{{route('imobilizado.create')}}" class="btn btn-info">Cadastrar</a>
