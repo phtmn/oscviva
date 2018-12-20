@@ -101,8 +101,25 @@ class ImobilizadoController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $messages = [
+            'required'  => 'O campo :attribute é obrigatório', 
+            'min'       => 'A quantidade de caracteres do campo :attribute é minima',
+            'string'    => 'O campo :attribute não é do tipo texto',
+            'numeric'   => 'O campo :attribute não é do tipo moeda',
+            'unique'    => 'O valor do campo :attribute já está em uso, escolha outro'
+        ];
+        $validator = Validator::make($request->all(),[  
+            'codigo'    => 'required|min:3|string|unique:imobilizados',
+            'descricao' => 'required|min:3',
+            'valor'     => 'required|numeric',                   
+        ],$messages);
+
+        
+        if($validator->fails()){
+            return redirect()->back()->withErrors($validator)->withInput(); 
+    }
         $imobilizado = Imobilizado::find($id)->update($request->all());
-        return redirect()->route('imobilizado.index');
+        return redirect()->route('imobilizado.index')->with('success', 'Registro alterado com sucesso!');
     }
 
     /**
